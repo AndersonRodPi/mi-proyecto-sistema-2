@@ -1,0 +1,13 @@
+# Use this workspace to collaborate
+workspace:
+  id: ""
+
+localResources:
+  collections:
+    - ../coleccion_postman.json
+
+# Each entry here maps a local resource to one or more corresponding objects in Postman Cloud
+
+cloudResources:
+  collections:
+    ../postman/collections/API Ventas - Módulo de Ventas: ca39a163-9b3f-4d69-a8e9-adfc0f9af8e5

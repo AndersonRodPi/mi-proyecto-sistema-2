@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "a1b2c3d4-e5f6-7890-1234-56789abcdef0",
+		"name": "API Ventas - Módulo de Ventas",
+		"description": "Colección de pruebas para los endpoints del Microservicio de Ventas (Spring Boot)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Pagos - Procesar Pago",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ventaId\": \"SALE-99881\",\n    \"metodoPago\": \"TARJETA_CREDITO\",\n    \"monto\": 1250.00\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/payments/process",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"payments",
+						"process"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ventas - Consultar por Vendedor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/sales/rep/VEND-1024",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"sales",
+						"rep",
+						"VEND-1024"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
